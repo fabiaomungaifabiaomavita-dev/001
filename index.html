@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home">Escola Online</a>
+            <nav class="nav-links">
+                <a href="#cursos">Cursos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#avaliacao">Avaliação</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <a class="btn btn-primary" href="#inscricao">Começar</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <div>
+                    <p class="eyebrow">Aprenda de qualquer lugar</p>
+                    <h1>Transforme sua carreira com cursos práticos online.</h1>
+                    <p class="hero-text">Aprenda com professores experientes, acesse aulas sob demanda e receba certificação para crescer profissionalmente.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#inscricao">Inscreva-se</a>
+                        <a class="btn btn-outline" href="#cursos">Ver cursos</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-inner">
+                        <p class="card-title">Curso em destaque</p>
+                        <h2>Marketing Digital para Iniciantes</h2>
+                        <p>Aprenda estratégias modernas de marketing, redes sociais e campanhas que convertem.</p>
+                        <div class="course-meta">
+                            <span>24 aulas</span>
+                            <span>Certificado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursos" class="section courses">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Nossos cursos</p>
+                    <h2>Aprenda novas habilidades com estrutura profissional</h2>
+                </div>
+                <div class="grid cards-grid">
+                    <article class="card">
+                        <h3>Design Gráfico</h3>
+                        <p>Crie projetos visuais, logos e materiais de marketing com ferramentas profissionais.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Programação Web</h3>
+                        <p>Domine HTML, CSS, JavaScript e construa sites responsivos reais.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Empreendedorismo</h3>
+                        <p>Aprenda a validar ideias, construir negócios e vender online.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="section about">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">Por que escolher</p>
+                    <h2>Uma escola pensada para seu sucesso.</h2>
+                    <p>Conteúdo atualizado, acompanhamento personalizado e uma comunidade ativa de alunos. Tudo para você aprender no seu ritmo e aplicar imediatamente.</p>
+                    <ul class="features-list">
+                        <li>Suporte direto com instrutores</li>
+                        <li>Aulas gravadas e ao vivo</li>
+                        <li>Projeto final com feedback</li>
+                    </ul>
+                </div>
+                <div class="stats-card">
+                    <div class="stat"><strong>450+</strong><span>Alunos formados</span></div>
+                    <div class="stat"><strong>12</strong><span>Cursos ativos</span></div>
+                    <div class="stat"><strong>98%</strong><span>Satisfação comprovada</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="avaliacao" class="section assessment">
+            <div class="container assessment-grid">
+                <div>
+                    <p class="eyebrow">Teste e avaliação</p>
+                    <h2>Avaliação inteligente com perguntas em tempo real</h2>
+                    <p>Responda perguntas, receba feedback instantâneo e acompanhe seu desempenho com uma experiência que parece estar sincronizada com IA.</p>
+                    <div class="assessment-meta">
+                        <span>Feedback instantâneo</span>
+                        <span>Revisão automática</span>
+                        <span>Aprendizado contínuo</span>
+                    </div>
+                </div>
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <p class="card-title">Desafio rápido</p>
+                        <h3 id="quiz-status">Pronto para começar?</h3>
+                    </div>
+                    <div id="quiz-area" class="quiz-area">
+                        <p class="quiz-prompt">Clique em iniciar para receber a primeira pergunta.</p>
+                        <div id="quiz-options" class="quiz-options"></div>
+                        <button class="btn btn-primary" id="quiz-action" type="button">Iniciar avaliação</button>
+                    </div>
+                    <div id="quiz-result" class="quiz-result" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscricao" class="section signup">
+            <div class="container signup-card">
+                <div>
+                    <p class="eyebrow">Inscreva-se agora</p>
+                    <h2>Comece sua jornada de aprendizagem hoje.</h2>
+                    <p>Ganhe acesso imediato a todos os cursos, mentoria e material exclusivo.</p>
+                </div>
+                <a class="btn btn-primary" href="#contato">Quero participar</a>
+            </div>
+        </section>
+
+        <section id="contato" class="section contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">Fale conosco</p>
+                    <h2>Pronto para crescer em sua carreira?</h2>
+                    <p>Envie uma mensagem e um de nossos consultores entrará em contato para orientar sua escolha de curso.</p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <label>
+                        Nome
+                        <input type="text" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" placeholder="seu@email.com" required>
+                    </label>
+                    <label>
+                        Mensagem
+                        <textarea rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+                    <div id="form-message" class="form-message" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year">2026</span> Escola Online. Todos os direitos reservados.</p>
+            <p>Aprendizagem acessível para todos.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

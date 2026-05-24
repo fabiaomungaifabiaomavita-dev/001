@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Escolar</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    display:flex;
+    height:100vh;
+}
+
+/* MENU */
+.menu{
+    width:220px;
+    background:#1e1e1e;
+    color:white;
+    padding:20px;
+}
+
+.menu h2{
+    margin-bottom:20px;
+}
+
+.menu button{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    text-align:left;
+}
+
+.menu button:hover{
+    background:#555;
+}
+
+/* CONTEÚDO */
+.conteudo{
+    flex:1;
+    padding:30px;
+    background:#f4f4f4;
+}
+
+.caixa{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- MENU -->
+<div class="menu">
+
+    <h2>MENU</h2>
+
+    <button onclick="mostrar('aula')">Aulas</button>
+    <button onclick="mostrar('testes')">Testes</button>
+    <button onclick="mostrar('disciplina')">Disciplinas</button>
+    <button onclick="mostrar('video')">Vídeos</button>
+
+</div>
+
+<!-- PÁGINA -->
+<div class="conteudo">
+
+    <div class="caixa" id="resultado">
+
+        <h1>Página Inicial</h1>
+        <p>Escolha uma opção no menu.</p>
+
+    </div>
+
+</div>
+
+<script>
+
+function mostrar(tipo){
+
+    let resultado = document.getElementById("resultado");
+
+    if(tipo == "aula"){
+
+        resultado.innerHTML = `
+            <h1>Aulas</h1>
+            <p>Lista de aulas disponíveis.</p>
+        `;
+
+    }
+
+    else if(tipo == "testes"){
+
+        resultado.innerHTML = `
+            <h1>Testes</h1>
+            <p>Área de testes e avaliações.</p>
+        `;
+
+    }
+
+    else if(tipo == "disciplina"){
+
+        resultado.innerHTML = `
+            <h1>Disciplinas</h1>
+            <p>Português, Matemática, Física...</p>
+        `;
+
+    }
+
+    else if(tipo == "video"){
+
+        resultado.innerHTML = `
+            <h1>Vídeos</h1>
+            <div id="fb-root"></div>
+            <div class="fb-video" data-href="https://www.facebook.com/share/v/18EGcKgYiK/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/share/v/18EGcKgYiK/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/share/v/18EGcKgYiK/">Vídeo do Facebook</a></blockquote></div>
+        `;
+        if(window.FB) FB.XFBML.parse();
+
+    }
+
+}
+
+</script>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v19.0" integrity="sha384-+s21yswqWaiI5at+c66164aG4+efmzKcqq3/7479e7a8ul+kLWxIZeNp75ivysNKL"></script>
+
+</body>
+</html>
